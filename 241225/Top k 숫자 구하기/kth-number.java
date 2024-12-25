@@ -7,7 +7,6 @@ public class Main {
 
         String[] nAndK = tmp.split(" ");
 
-        int n = Integer.parseInt(nAndK[0]);
         int k = Integer.parseInt(nAndK[1]);
 
         String tmp2 = sc.nextLine();
@@ -16,7 +15,13 @@ public class Main {
 
         Arrays.sort(numbersChar);
 
-        for(int i=0;i<numbersChar.length;i++) {
+        char[] numbersChar2 = Arrays.copyOf(numbersChar, numbersChar.length + 1);
+
+        for(int i=1;i<numbersChar2.length;i++) {            
+            numbersChar2[i] = numbersChar2[i-1];
+        }
+
+        for(int i=0;i<numbersChar2.length;i++) {
             if(i == k) {
                 System.out.println(numbersChar[i]);
                 break;
