@@ -21,7 +21,7 @@ public class Main {
             numbersChar2[i] = numbersChar2[i-1];
         }
 
-        for(int i=1;i<numbersChar2.length;i++) {
+        for(int i=1;i<numbersChar2.length+1;i++) {
             if(i == k) {
                 System.out.println(numbersChar[i]);
                 break;
